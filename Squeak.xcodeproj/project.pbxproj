@@ -11,6 +11,8 @@
 		03E9B3A42969121A00AF6FF0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E9B3A32969121A00AF6FF0 /* ContentView.swift */; };
 		03E9B3A62969121B00AF6FF0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 03E9B3A52969121B00AF6FF0 /* Assets.xcassets */; };
 		03E9B3A92969121B00AF6FF0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 03E9B3A82969121B00AF6FF0 /* Preview Assets.xcassets */; };
+		03E9B3B2296912BC00AF6FF0 /* Squeak.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E9B3B1296912BC00AF6FF0 /* Squeak.swift */; };
+		03E9B3B5296927BC00AF6FF0 /* PreferencePanesSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03E9B3B4296927BC00AF6FF0 /* PreferencePanesSupport.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +22,9 @@
 		03E9B3A52969121B00AF6FF0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		03E9B3A82969121B00AF6FF0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		03E9B3AA2969121B00AF6FF0 /* Squeak.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Squeak.entitlements; sourceTree = "<group>"; };
+		03E9B3B02969125E00AF6FF0 /* Squeak-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Squeak-Bridging-Header.h"; sourceTree = "<group>"; };
+		03E9B3B1296912BC00AF6FF0 /* Squeak.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Squeak.swift; sourceTree = "<group>"; };
+		03E9B3B4296927BC00AF6FF0 /* PreferencePanesSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PreferencePanesSupport.framework; path = ../../../../System/Library/PrivateFrameworks/PreferencePanesSupport.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -27,6 +32,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				03E9B3B5296927BC00AF6FF0 /* PreferencePanesSupport.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -38,6 +44,7 @@
 			children = (
 				03E9B3A02969121A00AF6FF0 /* Squeak */,
 				03E9B39F2969121A00AF6FF0 /* Products */,
+				03E9B3B3296927BC00AF6FF0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,6 +61,8 @@
 			children = (
 				03E9B3A12969121A00AF6FF0 /* SqueakApp.swift */,
 				03E9B3A32969121A00AF6FF0 /* ContentView.swift */,
+				03E9B3B1296912BC00AF6FF0 /* Squeak.swift */,
+				03E9B3B02969125E00AF6FF0 /* Squeak-Bridging-Header.h */,
 				03E9B3A52969121B00AF6FF0 /* Assets.xcassets */,
 				03E9B3AA2969121B00AF6FF0 /* Squeak.entitlements */,
 				03E9B3A72969121B00AF6FF0 /* Preview Content */,
@@ -67,6 +76,14 @@
 				03E9B3A82969121B00AF6FF0 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		03E9B3B3296927BC00AF6FF0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				03E9B3B4296927BC00AF6FF0 /* PreferencePanesSupport.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,6 +156,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				03E9B3B2296912BC00AF6FF0 /* Squeak.swift in Sources */,
 				03E9B3A42969121A00AF6FF0 /* ContentView.swift in Sources */,
 				03E9B3A22969121A00AF6FF0 /* SqueakApp.swift in Sources */,
 			);
@@ -283,7 +301,12 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.joshboys.Squeak;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "Squeak/Squeak-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
+				SYSTEM_FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SYSTEM_LIBRARY_DIR)/PrivateFrameworks",
+				);
 			};
 			name = Debug;
 		};
@@ -310,7 +333,12 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.joshboys.Squeak;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "Squeak/Squeak-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
+				SYSTEM_FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SYSTEM_LIBRARY_DIR)/PrivateFrameworks",
+				);
 			};
 			name = Release;
 		};
