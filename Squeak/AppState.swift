@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import LaunchAtLogin
 
 @MainActor
 final class AppState: ObservableObject {
@@ -47,7 +48,39 @@ final class AppState: ObservableObject {
     
     private func createMenu() {
         statusItem.menu = NSMenu()
+        addLaunchAtLoginItem()
+        addSeparator()
         addQuitItem()
+    }
+    
+    private func addLaunchAtLoginItem() {
+        guard let menu = statusItem.menu else { return }
+        
+        let menuItem = NSMenuItem()
+        menuItem.title = "Launch at login"
+        
+        if LaunchAtLogin.isEnabled {
+            menuItem.state = .on
+        }
+        
+        menuItem.action = #selector(toggleLaunchAtLogin)
+        menuItem.target = self
+        
+        menu.addItem(menuItem)
+    }
+    
+    @objc private func toggleLaunchAtLogin(menuItem: NSMenuItem) {
+        LaunchAtLogin.isEnabled = !LaunchAtLogin.isEnabled
+        if LaunchAtLogin.isEnabled {
+            menuItem.state = .on
+        } else {
+            menuItem.state = .off
+        }
+    }
+    
+    private func addSeparator() {
+        guard let menu = statusItem.menu else { return }
+        menu.addItem(.separator())
     }
     
     private func addQuitItem() {

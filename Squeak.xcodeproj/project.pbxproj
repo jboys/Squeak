@@ -14,6 +14,7 @@
 		03E9B3B5296927BC00AF6FF0 /* PreferencePanesSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03E9B3B4296927BC00AF6FF0 /* PreferencePanesSupport.framework */; };
 		03E9B3B7296941E800AF6FF0 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E9B3B6296941E800AF6FF0 /* AppState.swift */; };
 		03E9B3B92969433C00AF6FF0 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E9B3B82969433C00AF6FF0 /* Utilities.swift */; };
+		03E9B3BC2969504C00AF6FF0 /* LaunchAtLogin in Frameworks */ = {isa = PBXBuildFile; productRef = 03E9B3BB2969504C00AF6FF0 /* LaunchAtLogin */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				03E9B3BC2969504C00AF6FF0 /* LaunchAtLogin in Frameworks */,
 				03E9B3B5296927BC00AF6FF0 /* PreferencePanesSupport.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -105,6 +107,9 @@
 			dependencies = (
 			);
 			name = Squeak;
+			packageProductDependencies = (
+				03E9B3BB2969504C00AF6FF0 /* LaunchAtLogin */,
+			);
 			productName = Squeak;
 			productReference = 03E9B39E2969121A00AF6FF0 /* Squeak.app */;
 			productType = "com.apple.product-type.application";
@@ -133,6 +138,9 @@
 				Base,
 			);
 			mainGroup = 03E9B3952969121A00AF6FF0;
+			packageReferences = (
+				03E9B3BA2969504C00AF6FF0 /* XCRemoteSwiftPackageReference "LaunchAtLogin-Modern" */,
+			);
 			productRefGroup = 03E9B39F2969121A00AF6FF0 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -370,6 +378,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		03E9B3BA2969504C00AF6FF0 /* XCRemoteSwiftPackageReference "LaunchAtLogin-Modern" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/sindresorhus/LaunchAtLogin-Modern";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		03E9B3BB2969504C00AF6FF0 /* LaunchAtLogin */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 03E9B3BA2969504C00AF6FF0 /* XCRemoteSwiftPackageReference "LaunchAtLogin-Modern" */;
+			productName = LaunchAtLogin;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 03E9B3962969121A00AF6FF0 /* Project object */;
 }
