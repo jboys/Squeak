@@ -7,24 +7,26 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		03E9B3A22969121A00AF6FF0 /* SqueakApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E9B3A12969121A00AF6FF0 /* SqueakApp.swift */; };
-		03E9B3A42969121A00AF6FF0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E9B3A32969121A00AF6FF0 /* ContentView.swift */; };
+		03E9B3A22969121A00AF6FF0 /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E9B3A12969121A00AF6FF0 /* App.swift */; };
 		03E9B3A62969121B00AF6FF0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 03E9B3A52969121B00AF6FF0 /* Assets.xcassets */; };
 		03E9B3A92969121B00AF6FF0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 03E9B3A82969121B00AF6FF0 /* Preview Assets.xcassets */; };
 		03E9B3B2296912BC00AF6FF0 /* Squeak.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E9B3B1296912BC00AF6FF0 /* Squeak.swift */; };
 		03E9B3B5296927BC00AF6FF0 /* PreferencePanesSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03E9B3B4296927BC00AF6FF0 /* PreferencePanesSupport.framework */; };
+		03E9B3B7296941E800AF6FF0 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E9B3B6296941E800AF6FF0 /* AppState.swift */; };
+		03E9B3B92969433C00AF6FF0 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E9B3B82969433C00AF6FF0 /* Utilities.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		03E9B39E2969121A00AF6FF0 /* Squeak.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Squeak.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		03E9B3A12969121A00AF6FF0 /* SqueakApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SqueakApp.swift; sourceTree = "<group>"; };
-		03E9B3A32969121A00AF6FF0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		03E9B3A12969121A00AF6FF0 /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
 		03E9B3A52969121B00AF6FF0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		03E9B3A82969121B00AF6FF0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		03E9B3AA2969121B00AF6FF0 /* Squeak.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Squeak.entitlements; sourceTree = "<group>"; };
 		03E9B3B02969125E00AF6FF0 /* Squeak-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Squeak-Bridging-Header.h"; sourceTree = "<group>"; };
 		03E9B3B1296912BC00AF6FF0 /* Squeak.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Squeak.swift; sourceTree = "<group>"; };
 		03E9B3B4296927BC00AF6FF0 /* PreferencePanesSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PreferencePanesSupport.framework; path = ../../../../System/Library/PrivateFrameworks/PreferencePanesSupport.framework; sourceTree = "<group>"; };
+		03E9B3B6296941E800AF6FF0 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
+		03E9B3B82969433C00AF6FF0 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,9 +61,10 @@
 		03E9B3A02969121A00AF6FF0 /* Squeak */ = {
 			isa = PBXGroup;
 			children = (
-				03E9B3A12969121A00AF6FF0 /* SqueakApp.swift */,
-				03E9B3A32969121A00AF6FF0 /* ContentView.swift */,
+				03E9B3A12969121A00AF6FF0 /* App.swift */,
+				03E9B3B6296941E800AF6FF0 /* AppState.swift */,
 				03E9B3B1296912BC00AF6FF0 /* Squeak.swift */,
+				03E9B3B82969433C00AF6FF0 /* Utilities.swift */,
 				03E9B3B02969125E00AF6FF0 /* Squeak-Bridging-Header.h */,
 				03E9B3A52969121B00AF6FF0 /* Assets.xcassets */,
 				03E9B3AA2969121B00AF6FF0 /* Squeak.entitlements */,
@@ -156,9 +159,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				03E9B3B7296941E800AF6FF0 /* AppState.swift in Sources */,
 				03E9B3B2296912BC00AF6FF0 /* Squeak.swift in Sources */,
-				03E9B3A42969121A00AF6FF0 /* ContentView.swift in Sources */,
-				03E9B3A22969121A00AF6FF0 /* SqueakApp.swift in Sources */,
+				03E9B3B92969433C00AF6FF0 /* Utilities.swift in Sources */,
+				03E9B3A22969121A00AF6FF0 /* App.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -292,6 +296,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSUIElement = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -324,6 +329,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSUIElement = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

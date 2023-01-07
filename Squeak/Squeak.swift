@@ -16,21 +16,29 @@ extension Notification.Name {
 class Squeak {
     static let shared = Squeak()
     private var lastDeviceID: Int?
+    private var lastDeviceType: DeviceType?
     
     init() {
         lastDeviceID = nil
         NSEvent.addGlobalMonitorForEvents(matching: .scrollWheel, handler: scrollWheelHandler)
     }
     
+    public func getDeviceType() -> DeviceType? {
+        return lastDeviceType
+    }
+    
     private func scrollWheelHandler(event: NSEvent) {
         if lastDeviceID == nil || event.deviceID != lastDeviceID {
             lastDeviceID = event.deviceID
             if event.subtype == .mouseEvent {
-                print("Changed to mouse -- setting scroll to normal")
+                lastDeviceType = .mouse
                 setDirection(.normal)
             } else {
-                print("Changed to trackpad -- setting scroll to natural")
+                lastDeviceType = .trackpad
                 setDirection(.natural)
+            }
+            DispatchQueue.main.async {
+                AppState.shared.updateIcon()
             }
         }
     }
@@ -60,4 +68,9 @@ class Squeak {
 enum Direction: String {
     case normal
     case natural
+}
+
+enum DeviceType: String {
+    case mouse
+    case trackpad
 }

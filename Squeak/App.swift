@@ -8,10 +8,12 @@
 import SwiftUI
 
 @main
-struct SqueakApp: App {
+struct AppMain: App {
+    @StateObject private var appState = AppState.shared
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            if false {}
         }
     }
 }
