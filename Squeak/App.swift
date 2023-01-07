@@ -12,8 +12,8 @@ struct AppMain: App {
     @StateObject private var appState = AppState.shared
     
     var body: some Scene {
-        WindowGroup {
-            if false {}
+        Settings {
+            EmptyView()
         }
     }
 }
